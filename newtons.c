@@ -24,7 +24,7 @@ int main()
         i++;
         if (i > 100) break;
     } while(fabs(dx) > 1.0e-10);
-    if (i < 100) printf("root = %.15lf check %.15lf\n", x, f(x));
+    if (i < 100) printf("root=%.15lf   check value=%.15lf\n", x, f(x));
     else printf("Newton's Method failed!!\n");
     return 0;
 }
