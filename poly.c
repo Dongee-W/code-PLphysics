@@ -4,11 +4,11 @@ int main()
 {
     double fx, dfx, x, acoef[200];
     int n, i;
-    printf("Input rank of the polynomial: ");
+    printf("Input the order of the polynomial: ");
     scanf("%d", &n);
     for(i=1; i <= n + 1; i++)
     {
-        printf("#%d coefficient: ", i);
+        printf("%d order coefficient: ", i - 1);
         scanf("%lf", &acoef[i-1]);
 
     }
