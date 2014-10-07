@@ -42,17 +42,17 @@ int main()
             for(j=0; j<nr; j++) summ += 1.0/(x-root[j]);
             dx = fx / (df - fx * summ);
             x -= dx;
-            count ++; if(count>100) exit(1);
+            count ++; if(count>1000) exit(1);
         } while(fabs(dx) > 1.0e-6);
 
         root[nr] = x;
         nr ++;
         printf("root = %.15lf check = %.15lf\n", x, fx);
-    } while (nr <= nd);
+    } while (nr < nd);
 
-    printf("%d", nd);
-    int gg;
-    for(gg=0; gg<=nr;gg++) printf("#%d root = %d\n", gg, root[gg]);
+    printf("done");
+    //int gg;
+    //for(gg=0; gg<=nr;gg++) printf("#%d root = %d\n", gg, root[gg]);
 
     return 0;
 }
