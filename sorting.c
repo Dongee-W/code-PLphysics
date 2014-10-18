@@ -16,6 +16,7 @@ int main()
     // initialize the seq array
     for (i=0; i<NSIZE; i++) seq[i] = i;
 
+    // Display array
     printf("original number array: ");
     printar(number);
     sorting(NSIZE, numberx, seq);
@@ -28,7 +29,7 @@ int main()
     printf("]");
 }
 
-// print the array
+// array printer
 void printar(int* a)
 {
     int i;
@@ -42,16 +43,17 @@ void printar(int* a)
     printf("]\n");
 }
 
+// sorting function
 void sorting(int size, int* array, int* seqq)
 {
     int i, j, temp1, temp2;
-    for (i=0; i<=size-2; i++)
+    for (i=0; i<=size-2; i++) // step through the array
     {
         for (j=i+1; j<=size - 1; j++)
         {
-            if (array[i] > array[j])
+            if (array[i] > array[j]) // check if the lower index element > greater one
             {
-                // swap the order for array and seq
+                // swap the order of the element in array and seq
                 temp1 = array[i];
                 temp2 = seqq[i];
                 array[i] = array[j];
